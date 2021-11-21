@@ -22,4 +22,7 @@ SELECT * FROM AddressBookTable;
 -----------UC5-Delete person using first name------------
 DELETE FROM AddressBookTable WHERE FirstName='Pooja';
 
+----------UC6-Ability to Retrieve Person belonging to a City or State from the Address Book---------
+SELECT * FROM AddressBookTable WHERE City='Satara' OR State='Banglore';
+
 
