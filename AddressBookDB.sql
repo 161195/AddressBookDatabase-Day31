@@ -25,4 +25,8 @@ DELETE FROM AddressBookTable WHERE FirstName='Pooja';
 ----------UC6-Ability to Retrieve Person belonging to a City or State from the Address Book---------
 SELECT * FROM AddressBookTable WHERE City='Satara' OR State='Banglore';
 
+----------UC7-Count size of addressbook by City and State-----------
+SELECT COUNT(City) as TotalContact FROM AddressBookTable;
+SELECT COUNT(State) as TotalContact FROM AddressBookTable;
+
 
