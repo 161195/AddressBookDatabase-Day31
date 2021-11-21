@@ -35,6 +35,10 @@ SELECT COUNT(State) as TotalContact FROM AddressBookTable;
 -------------UC8-to retrieve entriesby sorted alphabetically with Person’s name for a given city---------
 SELECT * FROM AddressBookTable WHERE City='Haryana' ORDER BY (FirstName) ;
 
+------------UC9-identify each Address Book with name and Type-----------
+ALTER TABLE AddressBookTable ADD Type VARCHAR(25);
+ALTER TABLE AddressBookTable ADD Name VARCHAR(25);
+
 
 
 
