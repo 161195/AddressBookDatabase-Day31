@@ -33,11 +33,18 @@ SELECT COUNT(City) as TotalContact FROM AddressBookTable;
 SELECT COUNT(State) as TotalContact FROM AddressBookTable;
 
 -------------UC8-to retrieve entriesby sorted alphabetically with Person’s name for a given city---------
-SELECT * FROM AddressBookTable WHERE City='Haryana' ORDER BY (FirstName) ;
+SELECT * FROM AddressBookTable ORDER BY FirstName asc ;
 
 ------------UC9-identify each Address Book with name and Type-----------
 ALTER TABLE AddressBookTable ADD Type VARCHAR(25);
 ALTER TABLE AddressBookTable ADD Name VARCHAR(25);
+update AddressBookTable set name='addressbook1', type='family'where FirstName='Aditi';
+update AddressBookTable set name='contactbook1', type='college' where FirstName='Rahul';
+update AddressBookTable set name='contactbook1', type='school' where FirstName='Pratiksha';
+
+------------UC10-get the number of contact persons with count by type ----------
+SELECT * FROM AddressBookTable;
+select count(PhoneNumber) as No_of_contact from AddressBookTable group by type;
 
 
 
